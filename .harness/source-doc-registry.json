@@ -1,0 +1,604 @@
+{
+  "version": 1,
+  "preparedAt": "2026-09-27",
+  "backendRepository": "KBase-Knowledge-Base/KBase-BE",
+  "backendBranch": "feat-AI",
+  "backendCommit": "636ea26469823bc475732d1e0f79f147556d1f63",
+  "frontendRepository": "KBase-Knowledge-Base/KBase-FE",
+  "frontendOriginalState": "empty repository",
+  "apiOperations": 57,
+  "apiPaths": 38,
+  "uiTemplates": 22,
+  "routePatterns": 23,
+  "contractMode": "source-verified Markdown snapshot; runtime OpenAPI not fetched",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "gitBlob": "3e1efd0bd78d742d97b04d77bd5a08a5d7e56671",
+      "sha256": "08cb6a01619381b20c45a06b1ccc7fe72b971e749b81c3a20f6db4b9db3d6183",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/AGENTS.md"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "gitBlob": "80d88c87e198c23f1ccf8f75610e1b46704c753c",
+      "sha256": "f4568e6eedc740cc3f15d15ae23eba43ac5548bdf88df4c6364c34e76fc03013",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/ARCHITECTURE.md"
+    },
+    {
+      "path": "docs/API_CONVENTIONS.md",
+      "gitBlob": "ca4aa803ec25118f34d164dc5949e66ca6405f4b",
+      "sha256": "d8503a484b7b188dbd492a8651d88946ded1f4559193bb3acddfb76692c7728a",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/docs/API_CONVENTIONS.md"
+    },
+    {
+      "path": "docs/FRONTEND.md",
+      "gitBlob": "e92f9bd73b035c3716e91e372c52e2ffeef358e8",
+      "sha256": "c763efefd18f0188ba95d8ff1bfa3d4e6cbbdab716ea9144940e820980379b10",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/docs/FRONTEND.md"
+    },
+    {
+      "path": "docs/INTEGRATION.md",
+      "gitBlob": "27e0d3e5506437d6865fa5faa18f35c795354901",
+      "sha256": "96b47a88099097ab074bdc6ad49bddd6c83448f8081043d27c6b3b271ebbd4f4",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/docs/INTEGRATION.md"
+    },
+    {
+      "path": "docs/PLANS.md",
+      "gitBlob": "56d30d4ed3e4b0e987cb677f3d4f1da2a16c774a",
+      "sha256": "b9bcc2649877f5f1a37a9ff26507234990d8f186c1c69daeab9d0d20e852b8d5",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/docs/PLANS.md"
+    },
+    {
+      "path": "docs/generated/api-schema.md",
+      "gitBlob": "f9908aa7c2ac33f0b696ab007bb7b3cd333c2d99",
+      "sha256": "9cb2721f541dbd534a65875f69df8221ac493aba7f593cd3066a25c144b00153",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/docs/generated/api-schema.md"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/controller/DocumentAiIndexController.java",
+      "gitBlob": "50dc0526c9ff410d306c272b1772963f6c6c8c37",
+      "sha256": "b4cf50e3a7a1f8ac2795c21c41897ac00195cf086cbbd6eb31ec6d0dd86967c4",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/controller/DocumentAiIndexController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/controller/GuideController.java",
+      "gitBlob": "594f1016c6b0cca1975af5aff11e85207573af7d",
+      "sha256": "cbda9aef77b3d48975d76f625d03982480bf91246a7da5d72d848e9e7da02745",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/controller/GuideController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "gitBlob": "0ae13ecb771cbb6d7da8acc0ae774be1c6ad986b",
+      "sha256": "b83f9312dec8fa7fd21c50604175ef9f25241305bf05cd4201d5cc1dd863cec2",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/controller/ProjectAssistantController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/request/CreateAiConversationRequest.java",
+      "gitBlob": "c864a8069210de4a143e9706ffbb137d5e80d4fe",
+      "sha256": "3e4443a116fd573fcff0462553a8bb32b59792f0a6f3287720426df5bbc5a357",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/request/CreateAiConversationRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/request/GuideContextMessage.java",
+      "gitBlob": "75ea0051858f3874f63501b61c401dae0ca64b99",
+      "sha256": "5b5bc71796ac7de3161773b0236502e2a7434c2fcc0dc98195164816b041377f",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/request/GuideContextMessage.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/request/GuideQueryRequest.java",
+      "gitBlob": "45d4f7a80d7461cc1bfc15051e976acd28a2f628",
+      "sha256": "3a7ee610739b1d25f724f2c5f2acb3f54be59ddc00169395fd3cfbfca7596147",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/request/GuideQueryRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/request/RenameAiConversationRequest.java",
+      "gitBlob": "1e823779146a5a6cf82d21d95059b03e079a38e7",
+      "sha256": "0ed4ed7b62d7e94f15d8f08fe6b14cab02f1b866910d740d0699050955e13b70",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/request/RenameAiConversationRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/request/SendAiMessageRequest.java",
+      "gitBlob": "b497617d538dfe90de30118db20760616270c89c",
+      "sha256": "06f7df56e20f404cce14edd67611943a8111189c84de7925fa9009c5bec6cd94",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/request/SendAiMessageRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/AiConversationResponse.java",
+      "gitBlob": "1da363def3c5e535ca7cc423c6b2800bc90cc7d7",
+      "sha256": "ffbc4681e8e3fd87733d3abcde235190e6811bee08e518f17e867bfe4febc273",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/AiConversationResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/AiMessageResponse.java",
+      "gitBlob": "9cb38222d22691b1887c58f260a9cfe07978098e",
+      "sha256": "ad9de9e2af621c3a224ef7add7bf3de554d0e5aa1790cc9dd1a4152823b5db9d",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/AiMessageResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/AiSourceResponse.java",
+      "gitBlob": "d6f10d5d17797c3db2408a55ec091995acfa3fae",
+      "sha256": "3d7b24bcccfe38d1c83ee631df026d66512bd729b23a33e6d47de87baa30abf2",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/AiSourceResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/AiTurnResponse.java",
+      "gitBlob": "ae2a63bb3a2ba71ac13787eb09aae1c2d581f772",
+      "sha256": "9c83477459d9428c2e796e67f855bf202fda031cf3b9afbb4b0ed4d4dc808a22",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/AiTurnResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/CreateAiConversationResponse.java",
+      "gitBlob": "11f06bda1c26db16d4844c1ce62d1f762d5ef58d",
+      "sha256": "ac90df651e5fac321082b169b83158bfe64036c64b54f4ddb422fd42627c12ec",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/CreateAiConversationResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/DocumentAiIndexResponse.java",
+      "gitBlob": "32b810d1918fa3dc831013da445e4d528e44e01e",
+      "sha256": "2222b6bf1cfc647a44539e86fd3f5f5223206a0d938d022cd6b4bfaa03bc3951",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/DocumentAiIndexResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/GuideQueryResponse.java",
+      "gitBlob": "c88e61859b257b0d0118e5391e3f0014064b39c4",
+      "sha256": "b3d7d593b872637c7228cfa317f41781228f69a8af5ca0a5894af36748094a7a",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/GuideQueryResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/dto/response/GuideSourceResponse.java",
+      "gitBlob": "4932156970d7aa877312345f8b29931e46e487cc",
+      "sha256": "e2f5ee59ded7250b8eb318de43ba1616eec1b832d8713389ca67e59142243741",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/dto/response/GuideSourceResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/enums/AiAnswerType.java",
+      "gitBlob": "4476f98842839cf68c92d82b78bfb6d416ce4ca9",
+      "sha256": "3a9767a232ad52d5fed21e92048771e2092d791d21a1cfb66f11bed010451087",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/enums/AiAnswerType.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/enums/AiGenerationStatus.java",
+      "gitBlob": "0c6da110bbbeb9d0da0fca1c2ff686824246091a",
+      "sha256": "5a1193e62072809d60b0713f7d401945eb599d09e1951be6d78d359292eb667f",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/enums/AiGenerationStatus.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/enums/AiMessageRole.java",
+      "gitBlob": "aca2a2443affde9e1a10ef16a9730ea16cd6fca7",
+      "sha256": "290c34987490beca5345dc57a70787174d097b1ff9ec24634606f071f570420f",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/enums/AiMessageRole.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/enums/DocumentAiIndexStatus.java",
+      "gitBlob": "7967b1ae86e0170b723cf386991cd0190b9399c6",
+      "sha256": "8d695df76a221534d28db7e25567707ad9a35b3354e66021c8b8eaf193c10d75",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/enums/DocumentAiIndexStatus.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/provider/model/AiChatRole.java",
+      "gitBlob": "30753fa44197debe762da010043bb5ea10254738",
+      "sha256": "9c4849ab1a1c6a2dd2298cb0bf6eab73fcb315b92bdf3ac90006756cc2e81924",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/provider/model/AiChatRole.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/ai/service/ProjectAssistantConversationService.java",
+      "gitBlob": "22420149828fb7904a62a2595a8b63388f25501d",
+      "sha256": "3846722bc6e92ccd9f784833fc7418b4ab60677a658490ff6895266f1db26455",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/ai/service/ProjectAssistantConversationService.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/controller/AuthController.java",
+      "gitBlob": "64b477044a5a61746a301c09c6892e1734222650",
+      "sha256": "f3e9196ca81fa50dec5afbe10b39ced056fcf683b8c2698a4eedf42043ecd070",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/controller/AuthController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/request/LoginRequest.java",
+      "gitBlob": "6f0772ad73dfeac63eac4552e13beedbe66ec3ef",
+      "sha256": "427bf3773c16a77378d2154f6784843ffb92c7f0b32ee502c4938a049e9194cd",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/request/LoginRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/request/RegisterRequest.java",
+      "gitBlob": "ca3dcb976b79004c860684d3b3340844a8499de0",
+      "sha256": "2b3f277b3b428f3a1f55c8391e199363e268215a477210a1befbb62dd5eeddba",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/request/RegisterRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/request/ResendVerificationOtpRequest.java",
+      "gitBlob": "1d612b6a4c5cec707adbd2fa3e1c9ec7af37a5f5",
+      "sha256": "9e59cefa3273b19fc9d70cfb8551e5c5e08345d48475ae2536b77b7caf939693",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/request/ResendVerificationOtpRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/request/VerifyEmailRequest.java",
+      "gitBlob": "dd8eb9313e85356a7224808bffdcd6111eb80651",
+      "sha256": "de557bb4d2a4f67cd5df73b2ec4abce22dd68b618f9bcafb60321da3a2dcbd6e",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/request/VerifyEmailRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/response/AccessTokenResponse.java",
+      "gitBlob": "ff49b6d78028e0f1fd255988c11cbfd8af57fafa",
+      "sha256": "6af80c672ca677a41991d61f6cf7eb10feee885249d9ce9086bb553c95cc1f92",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/response/AccessTokenResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/response/LoginResponse.java",
+      "gitBlob": "fa40026a1184b853c636abe11483d2cdb5607178",
+      "sha256": "5ba6bbf6f75b9aa3a8ea199afadaf6626828dd1e7d80d0866367590a7477be17",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/response/LoginResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/response/RegisterResponse.java",
+      "gitBlob": "eaa6adf73b1a64e236dd3e8db32398615be34903",
+      "sha256": "1b3663ff5986c97d5baded7c89191d49d51ab9145901e64e3cf31951491cc4f9",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/response/RegisterResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/response/UserResponse.java",
+      "gitBlob": "3d9ef0cef9a364401cc5822a44320d21aaba34bc",
+      "sha256": "a202b8a7ae21a2aca5a4f9d5f0b167c0f37b385e1446d4fe988b0f5bdb4b7f68",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/response/UserResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/auth/dto/response/VerifyEmailResponse.java",
+      "gitBlob": "b00274e3562480611d80faa50a6f8e60c50866c7",
+      "sha256": "4fff0e0080e99266250a63b38839c606ff118c4828042cce91d83601c9ef361a",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/auth/dto/response/VerifyEmailResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/category/controller/CategoryController.java",
+      "gitBlob": "afefab998498e005c1232e3a0aa6d9ebeaea6fd5",
+      "sha256": "f0a0590ed3ec9983a1272f2df8fe10d04020c0760a309100e7f60355f6735dcd",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/category/controller/CategoryController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/category/dto/request/CreateCategoryRequest.java",
+      "gitBlob": "d264d38f56181aff935050b70df51828c9a1746b",
+      "sha256": "11c59eb1e49b8859e0cefd981bef881e70ba3e0e96202f9eb717032bb0ef0a30",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/category/dto/request/CreateCategoryRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/category/dto/request/UpdateCategoryRequest.java",
+      "gitBlob": "44ec3ff9999833ead7ba0d3a8b2ce99c8d8e470e",
+      "sha256": "f03d8593537f98da4a051996aff28c61be96abbddde1d642c6052a0fb64b76c4",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/category/dto/request/UpdateCategoryRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/category/dto/response/CategoryResponse.java",
+      "gitBlob": "08b65948922f36380e3100896e49e7b719afd30d",
+      "sha256": "1daec39d52fb06cb4d7bc5c08dd4e255d665358614bd2fb70a2d9c0f1f705e86",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/category/dto/response/CategoryResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/config/properties/InvitationProperties.java",
+      "gitBlob": "87b66cc615557cc533b1b90f712c738aa746da93",
+      "sha256": "a448b2d0e97479c7eb8e717bc2764ca143d4aa2564c8de9d75d147a7fdb687f7",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/config/properties/InvitationProperties.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/config/properties/UploadProperties.java",
+      "gitBlob": "4cb8eab43108aa58aefcd7fc8290d5761e2413d0",
+      "sha256": "0819fdfbb3c401c7343a644adab44d67fe008b236543c5337a1b0978d9013ecb",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/config/properties/UploadProperties.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "gitBlob": "d23a661fab5328c6b39434b402430414afb5ae06",
+      "sha256": "90c567e088b9a74c4168d522511cb69a98b330f41e58dc85ceb013078d85fdbc",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/controller/DocumentController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/request/DocumentMetadataRequest.java",
+      "gitBlob": "bcb2e9488b119a65574f644c61fe9a637d464b74",
+      "sha256": "36404c5d5bc94ca8bad113e7625f94f5c4fb1f4bcf47eac023bf692a331195b7",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/request/DocumentMetadataRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/request/UpdateDocumentRequest.java",
+      "gitBlob": "ddd794be0cd4f3973e958746ee2a805610d23748",
+      "sha256": "f7a6004d67b7b5c32ec61443f681a09f2c4159b7e2d9d5033ca12df1539c2abc",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/request/UpdateDocumentRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/response/BatchDocumentUploadResponse.java",
+      "gitBlob": "028ac6da6476a97749490cd7ea3f472f8d59b68f",
+      "sha256": "a83d84ebaac9a55a3518db2ab373a16d4acf7d83e9dd6224255bc261bc0f493e",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/response/BatchDocumentUploadResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/response/DocumentCategoryResponse.java",
+      "gitBlob": "a96c652aaa4fdb49fe553d17b8875e516c9087ac",
+      "sha256": "410385234cc93107b617b5f742b37adf173b0786675c3a7e69724e40e1992ffc",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/response/DocumentCategoryResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/response/DocumentResponse.java",
+      "gitBlob": "22d3260e9b7f25aaeae8e6d9a6e921c2f27f43a5",
+      "sha256": "89b772001a8a2b4937726357926a083b7857cfd130c9529b06d9c0bf2b3fad97",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/response/DocumentResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/response/DocumentSummaryResponse.java",
+      "gitBlob": "12872b6c5fab440ebcbc59dea7e31343de67a35b",
+      "sha256": "8f24cb97f4a9be170e3a37d09392c9ba01ac05a24b2803967662f158ae7ce30d",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/response/DocumentSummaryResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/response/DocumentTagResponse.java",
+      "gitBlob": "372f29488da9efc7dff6547297368e8d4c561739",
+      "sha256": "b3dda780d066f7a9b2f2fd83e6050c6647448b6c9ea51a72c506591ff964bb27",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/response/DocumentTagResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/dto/response/DocumentUserResponse.java",
+      "gitBlob": "1ac34a53494d4b82ff447b904a2c222f5fd42ea2",
+      "sha256": "b7757d0013c2c2b7429bdf236aa0032497f7d1bb5683e9f6648633bd2ebc7874",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/dto/response/DocumentUserResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/enums/FileKind.java",
+      "gitBlob": "7778fde4c9204bfcb18d250ded4ad51e991b3241",
+      "sha256": "c1bda49620e2651da6161b8bcd0ddbb98b79b01331ecdb533fd36ef6cc33f84e",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/enums/FileKind.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/service/DocumentAuthorizationService.java",
+      "gitBlob": "444de6ce7e4f62af9ddb185eaf497cdc9261a293",
+      "sha256": "1e656132f209cf4ff7849730e1c0de9a8e65c5ae63ec38c5f01fdafb3b6e972e",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/service/DocumentAuthorizationService.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/service/DocumentService.java",
+      "gitBlob": "ef9b6a36a95c89326a64de8a080e19803a82eed3",
+      "sha256": "1f0ad4efd736585d9aaf870be5c3c0f3850990b59ae2200974558a2b40df05aa",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/service/DocumentService.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/document/service/FileValidationService.java",
+      "gitBlob": "a139684e6e549961a0b9b49ec9f39d2a47459fd7",
+      "sha256": "badacc378859a26cb2ba04c81456a81b18b6c9afe331ff6595c9ed7bdad24e4a",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/document/service/FileValidationService.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/folder/controller/FolderController.java",
+      "gitBlob": "00e8aa74b00a7719a09b9c39ec78473a17463831",
+      "sha256": "ffb9ed788139ab0a472bf6e2bb1746180af2eb713b5195a96accc1441be2c7b9",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/folder/controller/FolderController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/folder/dto/request/CreateFolderRequest.java",
+      "gitBlob": "54468ffef9f44a0d4638bb9bca90877121751c37",
+      "sha256": "85f4de94e2bd18f3809646ecd69ac28ebd175417a7f5e0b918ce5dffb0c8b499",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/folder/dto/request/CreateFolderRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/folder/dto/request/UpdateFolderRequest.java",
+      "gitBlob": "6456b9bc6ca62a58171c0033cfaac36d074edb91",
+      "sha256": "ec257e273e97444c7c0751af315844a4fdba9dc094fefb31b884954dbe689567",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/folder/dto/request/UpdateFolderRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/folder/dto/response/FolderResponse.java",
+      "gitBlob": "528ecabae941f4d8db9cff9e63dcb20bdbf70362",
+      "sha256": "110ed93bbf73cd2c845c2ddff53c4493d3cd8bc9024724e8db67bb0c1f732911",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/folder/dto/response/FolderResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/invitation/controller/InvitationAcceptController.java",
+      "gitBlob": "066f14e08068884f954b56d89c31c10b42c8fa16",
+      "sha256": "7caf380a2b11b71712bb1463bf2c760929d3cddaca0d27a748ae509411755c0b",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/invitation/controller/InvitationAcceptController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/invitation/controller/InvitationController.java",
+      "gitBlob": "bba47ec52b5ddfd6ab1ce081caa1a948b5d0a20f",
+      "sha256": "dbd983f7e0a2bfea65738105d0a291976dd1381b09b60af400e3bc409905bcbc",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/invitation/controller/InvitationController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/invitation/dto/request/AcceptInvitationRequest.java",
+      "gitBlob": "b9beb58e538e40750826f2c9262e62c799464097",
+      "sha256": "fdca2306463062801fb6e874429d34a493fae2812c30f84403872147aeb68d81",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/invitation/dto/request/AcceptInvitationRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/invitation/dto/request/CreateInvitationRequest.java",
+      "gitBlob": "c8aede610cd8020c3df0d5617386e199bd84e7ee",
+      "sha256": "4a5883cef53982fc20c79769a09480f9101e11dc9f6ae5221e14ee1b5bcff890",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/invitation/dto/request/CreateInvitationRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/invitation/dto/response/AcceptInvitationResponse.java",
+      "gitBlob": "ef553080859e55742ec64de2e13c458110fd2bdb",
+      "sha256": "8bd22aa4ceb52efc0678074f3d6c2239153eeec7ef20533ba1a586e482065580",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/invitation/dto/response/AcceptInvitationResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/invitation/dto/response/InvitationResponse.java",
+      "gitBlob": "06567dc42f6885701936f582fd85dd46325b8615",
+      "sha256": "624aae1b9b72f2e5ff3daa8dbb6330ddd6d8a9d84c7bec2fa08b49cb406b21dc",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/invitation/dto/response/InvitationResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/invitation/enums/InvitationStatus.java",
+      "gitBlob": "2436fd2486658222f6b5035be59eab505608440c",
+      "sha256": "40cf39a44f97070ec1ab6cb6b82a530a23147e0e7d2fa458da40db902e1f4831",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/invitation/enums/InvitationStatus.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/controller/AdminProjectController.java",
+      "gitBlob": "cb8d76a64af0f91f7d761f1262e9d86c30e0b161",
+      "sha256": "bab5f23ee09eb3d38e72cee12fa0164ff5ffe1c397124c58b0ce5a88d65b9034",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/controller/AdminProjectController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/controller/ProjectController.java",
+      "gitBlob": "6a92a9a99c57d7c098aa8cacba9e11a51770a9ea",
+      "sha256": "34b2c4a69cdccc1c893865e1365f94f490a1e94d0f3172d879f981fb7f680458",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/controller/ProjectController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/controller/ProjectMemberController.java",
+      "gitBlob": "9887a83c95ab2057edc54ef273893931cc698584",
+      "sha256": "d280dde5033aa6581cb6793147ab2c58260bae9c4b55ed4de221a90412c8206c",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/controller/ProjectMemberController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/dto/request/CreateProjectRequest.java",
+      "gitBlob": "8f625aef434ca53e177be4f9953e6657c77b8508",
+      "sha256": "11843661b3b2f2c49f5b4227bdb855c27445b3cefa84aeaddb093c71e3d68237",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/dto/request/CreateProjectRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/dto/request/UpdateProjectRequest.java",
+      "gitBlob": "6d35e7b738d66ad8c91b472eabbb410611e09c09",
+      "sha256": "49ed7a6ac9efb7b75277e5ab91fcdc3ab087589f36188f3c1b8e27c49ef8d6db",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/dto/request/UpdateProjectRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/dto/response/ProjectMemberResponse.java",
+      "gitBlob": "b63c2a7dbf2e931a45f7d95d396c601a7e5fe390",
+      "sha256": "cec0ecda384ac1ee6bf82af7b3cf58e8b4b239946078a94eb4f372c49ac5eac2",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/dto/response/ProjectMemberResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/dto/response/ProjectResponse.java",
+      "gitBlob": "cb47cf532250d6d3633187350969aa1d1816efe8",
+      "sha256": "16c7c72a053e6f2e61820c0fb729bd33c74086be2788cc120f60ee2f7b4c362c",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/dto/response/ProjectResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/enums/ProjectRole.java",
+      "gitBlob": "15de634b57a40cdc482787500fba402929490f7e",
+      "sha256": "a46874917fbaa785fe0175ba33121caee2fbfecd948441070508b23e9234e523",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/enums/ProjectRole.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/project/service/ProjectAuthorizationService.java",
+      "gitBlob": "02da838fa05230ec52f17c9503fe70c212e64608",
+      "sha256": "a7203359dd78c20ccd49059cdbec04a8c8143525ff7453a52727b218f7c49d84",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/project/service/ProjectAuthorizationService.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/security/config/SecurityConfig.java",
+      "gitBlob": "1ab44845ca7f9b223f4f13b93f8540201b93eebc",
+      "sha256": "c227bf9426cea9d2e68b4d6f88cdd20004fe5239e5180e6cfcab61d68800b439",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/security/config/SecurityConfig.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/shared/exception/ErrorCode.java",
+      "gitBlob": "f64cc3dc07a339d77b22211b904fa666960cbe8f",
+      "sha256": "3c7f22ba674303fd259e84065a0a5cc8c005efa6dc704b6a86b23ac0cb20b984",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/shared/exception/ErrorCode.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/shared/pagination/PageResponse.java",
+      "gitBlob": "1cb97ecc510486ba3b6a5dfb68059575611ed4f8",
+      "sha256": "ceef88ca38a87c1ba0620dbd638938b84a0251f8181d28d2d4540778c93f7396",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/shared/pagination/PageResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/shared/pagination/PaginationParser.java",
+      "gitBlob": "1fa6e902b4bf8f5a410b5bea831d74a9279ade1a",
+      "sha256": "aae49fd8f776ba8d6021a80ab7641556a492891be7de49b1a1d8be0f950df3e1",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/shared/pagination/PaginationParser.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/shared/response/ApiErrorResponse.java",
+      "gitBlob": "d208e364a35257ebab88a465f952b898256ae08e",
+      "sha256": "c65aced798c1f2580c24fd9258b66f55d3a824624cdfcddacbe1a3386145d251",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/shared/response/ApiErrorResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/tag/controller/TagController.java",
+      "gitBlob": "ce070a58338bfd6c9bc0d01cda51b137909c9400",
+      "sha256": "2a2cc5276fcf771bd6d0cd4bf77de702eaa63a44d3c6b89318b96ed062563fab",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/tag/controller/TagController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/tag/dto/request/CreateTagRequest.java",
+      "gitBlob": "f940650b3fc9d41da935b15ddeb1c4fefddd1192",
+      "sha256": "f2c8ec33397834188811a2f8afab68b6de6c4ac1daa7a5301fa496336de0e2bf",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/tag/dto/request/CreateTagRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/tag/dto/request/UpdateTagRequest.java",
+      "gitBlob": "1fd6ed2413f92b2649c571122ad7f9cc792dda75",
+      "sha256": "52b1b71fa99e1e7e995d4192fb602c5a08f92235da4d262af1a45c42378ab7bb",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/tag/dto/request/UpdateTagRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/tag/dto/response/TagResponse.java",
+      "gitBlob": "a1772fa6dfd03b1eb26375a0c083ca1c3a1deda0",
+      "sha256": "f365be1161dde264835ababbdfb7392cfb1e21f67d0009625d1102660cab06c3",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/tag/dto/response/TagResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/controller/AdminUserController.java",
+      "gitBlob": "5a689cd44081deae93d34288625d385fbf9c5f7d",
+      "sha256": "bfa53dbaeeaa29fa4a7a49be86448099217122f1146fc95df383ad9fd2a2dc4f",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/controller/AdminUserController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/controller/UserController.java",
+      "gitBlob": "56f08138af7a0129a5897d3586f91402630069d4",
+      "sha256": "deac7bfcf022be0b2b3fa95721e9a5caffdec86a00044a12c8c663bcf263d57a",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/controller/UserController.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/dto/request/ChangePasswordRequest.java",
+      "gitBlob": "d433769e7cc3c81da39a754dd5e7ef55ecfb3edf",
+      "sha256": "f75c6a5e5e34df9fd10d50d3313683c663503cd19c273e65d21442ac02cc25d2",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/dto/request/ChangePasswordRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/dto/request/ChangeUserStatusRequest.java",
+      "gitBlob": "9032b6b4662a1b72a381ee59280d2cd9f04c6430",
+      "sha256": "9a633208768a50db3d392289b2a77412a16547ca7910fe8dd751501912d62382",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/dto/request/ChangeUserStatusRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/dto/request/UpdateProfileRequest.java",
+      "gitBlob": "82fc81e52e9beb3bdaab69f10ee90b0390ee7e4d",
+      "sha256": "ca05b8338942df8ca9008488ffc7c43a7f986624c7c17b70a3bff56f3b4ab75c",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/dto/request/UpdateProfileRequest.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/dto/response/UserResponse.java",
+      "gitBlob": "7b3a56f82985a3178705488f81fd855f03d4dc55",
+      "sha256": "aab61f87140a126f9f3fbff195857e5da3a0ea7e2d2ce647412fd9230c46280a",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/dto/response/UserResponse.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/enums/SystemRole.java",
+      "gitBlob": "7dc300ba7f6fcc92d8ac69662e72198d37afa0a6",
+      "sha256": "0bf6c3ca834c0e225033fba4b79db39e34324dc6559238193a9a2ab3cec8bd17",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/enums/SystemRole.java"
+    },
+    {
+      "path": "src/main/java/com/kbase/user/enums/UserStatus.java",
+      "gitBlob": "e5fd7a72f638fc0a982206a77c910b44b51ee8e3",
+      "sha256": "2dd25e4cb97ab1fee9f981f26f01e03cfd9966f99870d7ecddbae32619d88cc7",
+      "url": "https://github.com/KBase-Knowledge-Base/KBase-BE/blob/636ea26469823bc475732d1e0f79f147556d1f63/src/main/java/com/kbase/user/enums/UserStatus.java"
+    }
+  ],
+  "snapshots": [
+    {
+      "path": "docs/references/backend/api-schema.md",
+      "sha256": "9cb2721f541dbd534a65875f69df8221ac493aba7f593cd3066a25c144b00153"
+    },
+    {
+      "path": "docs/references/backend/controller-source.md",
+      "sha256": "d15948717d164adc1bcd9009c4cb76d07f01802f4af5b13c1f45f379ac28f741"
+    },
+    {
+      "path": "docs/references/backend/dto-source.md",
+      "sha256": "bc387c91a4de54e4272db6777c27aa3832090b12f31443b1222386e5bf8d0d0a"
+    },
+    {
+      "path": "docs/references/backend/policy-source.md",
+      "sha256": "fc6df295efdef3697689c309d199d3ab9e83966a5ffd24bc1c05cf532fc6b7d7"
+    }
+  ]
+}

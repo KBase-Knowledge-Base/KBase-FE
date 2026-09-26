@@ -1,0 +1,575 @@
+{
+  "backendCommit": "636ea26469823bc475732d1e0f79f147556d1f63",
+  "operations": [
+    {
+      "id": "FEAPI-001",
+      "method": "POST",
+      "path": "/api/v1/auth/register",
+      "controller": "src/main/java/com/kbase/auth/controller/AuthController.java",
+      "ui": "UI03",
+      "request": "RegisterRequest",
+      "response": "201 RegisterResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-002",
+      "method": "POST",
+      "path": "/api/v1/auth/verify-email",
+      "controller": "src/main/java/com/kbase/auth/controller/AuthController.java",
+      "ui": "UI04",
+      "request": "VerifyEmailRequest",
+      "response": "200 VerifyEmailResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-003",
+      "method": "POST",
+      "path": "/api/v1/auth/resend-verification-otp",
+      "controller": "src/main/java/com/kbase/auth/controller/AuthController.java",
+      "ui": "UI04",
+      "request": "ResendVerificationOtpRequest",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-004",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "controller": "src/main/java/com/kbase/auth/controller/AuthController.java",
+      "ui": "UI02",
+      "request": "LoginRequest",
+      "response": "200 LoginResponse + Set-Cookie",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-005",
+      "method": "POST",
+      "path": "/api/v1/auth/refresh",
+      "controller": "src/main/java/com/kbase/auth/controller/AuthController.java",
+      "ui": "UI02 / shared session",
+      "request": "Không body",
+      "response": "200 AccessTokenResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-006",
+      "method": "POST",
+      "path": "/api/v1/auth/logout",
+      "controller": "src/main/java/com/kbase/auth/controller/AuthController.java",
+      "ui": "shared global menu / UI17",
+      "request": "Không body",
+      "response": "204 No Content + Set-Cookie clear",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-007",
+      "method": "GET",
+      "path": "/api/v1/users/me",
+      "controller": "src/main/java/com/kbase/user/controller/UserController.java",
+      "ui": "UI16 / shared session",
+      "request": "Không body",
+      "response": "200 UserResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-008",
+      "method": "PATCH",
+      "path": "/api/v1/users/me",
+      "controller": "src/main/java/com/kbase/user/controller/UserController.java",
+      "ui": "UI16 / shared session",
+      "request": "UpdateProfileRequest",
+      "response": "200 UserResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-009",
+      "method": "PUT",
+      "path": "/api/v1/users/me/password",
+      "controller": "src/main/java/com/kbase/user/controller/UserController.java",
+      "ui": "UI17",
+      "request": "ChangePasswordRequest",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-010",
+      "method": "GET",
+      "path": "/api/v1/admin/users",
+      "controller": "src/main/java/com/kbase/user/controller/AdminUserController.java",
+      "ui": "UI18 / UI19",
+      "request": "Không body",
+      "response": "200 PageResponse&lt;UserResponse&gt;",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-011",
+      "method": "GET",
+      "path": "/api/v1/admin/users/{userId}",
+      "controller": "src/main/java/com/kbase/user/controller/AdminUserController.java",
+      "ui": "UI18 / UI19",
+      "request": "Không body",
+      "response": "200 UserResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-012",
+      "method": "PATCH",
+      "path": "/api/v1/admin/users/{userId}/status",
+      "controller": "src/main/java/com/kbase/user/controller/AdminUserController.java",
+      "ui": "UI18 / UI19",
+      "request": "ChangeUserStatusRequest",
+      "response": "200 UserResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-013",
+      "method": "DELETE",
+      "path": "/api/v1/admin/users/{userId}",
+      "controller": "src/main/java/com/kbase/user/controller/AdminUserController.java",
+      "ui": "UI18 / UI19",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-014",
+      "method": "POST",
+      "path": "/api/v1/projects",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectController.java",
+      "ui": "UI06",
+      "request": "CreateProjectRequest",
+      "response": "201 ProjectResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-015",
+      "method": "GET",
+      "path": "/api/v1/projects",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectController.java",
+      "ui": "UI06",
+      "request": "Không body",
+      "response": "200 PageResponse&lt;ProjectResponse&gt;",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-016",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectController.java",
+      "ui": "UI07 / UI13 / shared project context",
+      "request": "Không body",
+      "response": "200 ProjectResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-017",
+      "method": "PATCH",
+      "path": "/api/v1/projects/{projectId}",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectController.java",
+      "ui": "UI07 / UI13 / shared project context",
+      "request": "UpdateProjectRequest",
+      "response": "200 ProjectResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-018",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectController.java",
+      "ui": "UI07 / UI13 / shared project context",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-019",
+      "method": "GET",
+      "path": "/api/v1/admin/projects",
+      "controller": "src/main/java/com/kbase/project/controller/AdminProjectController.java",
+      "ui": "UI20",
+      "request": "Không body",
+      "response": "200 PageResponse&lt;ProjectResponse&gt;",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-020",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/members",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectMemberController.java",
+      "ui": "UI10 / UI08 uploader filter",
+      "request": "Không body",
+      "response": "200 PageResponse&lt;ProjectMemberResponse&gt;",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-021",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}/members/{userId}",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectMemberController.java",
+      "ui": "UI10 / UI08 uploader filter",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-022",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}/members/me",
+      "controller": "src/main/java/com/kbase/project/controller/ProjectMemberController.java",
+      "ui": "UI10 / UI08 uploader filter",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-023",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/invitations",
+      "controller": "src/main/java/com/kbase/invitation/controller/InvitationController.java",
+      "ui": "UI11 / UI10 invite shortcut",
+      "request": "CreateInvitationRequest",
+      "response": "201 InvitationResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-024",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/invitations",
+      "controller": "src/main/java/com/kbase/invitation/controller/InvitationController.java",
+      "ui": "UI11 / UI10 invite shortcut",
+      "request": "Không body",
+      "response": "200 PageResponse&lt;InvitationResponse&gt;",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-025",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/invitations/{invitationId}/resend",
+      "controller": "src/main/java/com/kbase/invitation/controller/InvitationController.java",
+      "ui": "UI11 / UI10 invite shortcut",
+      "request": "Không body",
+      "response": "200 InvitationResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-026",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}/invitations/{invitationId}",
+      "controller": "src/main/java/com/kbase/invitation/controller/InvitationController.java",
+      "ui": "UI11 / UI10 invite shortcut",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-027",
+      "method": "POST",
+      "path": "/api/v1/invitations/accept",
+      "controller": "src/main/java/com/kbase/invitation/controller/InvitationAcceptController.java",
+      "ui": "UI05",
+      "request": "AcceptInvitationRequest",
+      "response": "200 AcceptInvitationResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-028",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/folders",
+      "controller": "src/main/java/com/kbase/folder/controller/FolderController.java",
+      "ui": "UI12 / UI08",
+      "request": "Query `parentId` tùy chọn",
+      "response": "200 `FolderResponse[]`",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-029",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/folders",
+      "controller": "src/main/java/com/kbase/folder/controller/FolderController.java",
+      "ui": "UI12 / UI08",
+      "request": "CreateFolderRequest",
+      "response": "201 FolderResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-030",
+      "method": "PATCH",
+      "path": "/api/v1/projects/{projectId}/folders/{folderId}",
+      "controller": "src/main/java/com/kbase/folder/controller/FolderController.java",
+      "ui": "UI12 / UI08",
+      "request": "UpdateFolderRequest",
+      "response": "200 FolderResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-031",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}/folders/{folderId}",
+      "controller": "src/main/java/com/kbase/folder/controller/FolderController.java",
+      "ui": "UI12 / UI08",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-032",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/categories",
+      "controller": "src/main/java/com/kbase/category/controller/CategoryController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "Không body",
+      "response": "200 `CategoryResponse[]`",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-033",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/categories",
+      "controller": "src/main/java/com/kbase/category/controller/CategoryController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "CreateCategoryRequest",
+      "response": "201 CategoryResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-034",
+      "method": "PATCH",
+      "path": "/api/v1/projects/{projectId}/categories/{categoryId}",
+      "controller": "src/main/java/com/kbase/category/controller/CategoryController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "UpdateCategoryRequest",
+      "response": "200 CategoryResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-035",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}/categories/{categoryId}",
+      "controller": "src/main/java/com/kbase/category/controller/CategoryController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-036",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/tags",
+      "controller": "src/main/java/com/kbase/tag/controller/TagController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "Query `q` tùy chọn",
+      "response": "200 `TagResponse[]`",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-037",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/tags",
+      "controller": "src/main/java/com/kbase/tag/controller/TagController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "CreateTagRequest",
+      "response": "201 TagResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-038",
+      "method": "PATCH",
+      "path": "/api/v1/projects/{projectId}/tags/{tagId}",
+      "controller": "src/main/java/com/kbase/tag/controller/TagController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "UpdateTagRequest",
+      "response": "200 TagResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-039",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}/tags/{tagId}",
+      "controller": "src/main/java/com/kbase/tag/controller/TagController.java",
+      "ui": "UI12 / UI08 / UI09",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-040",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/documents",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI08 upload/browse",
+      "request": "Query `q`, `folderId`, `categoryId`, `tagId`, `fileKind`, `uploadedBy`, `createdFrom`, `createdTo`, pagination/sort",
+      "response": "200 `PageResponse<DocumentSummaryResponse>`",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-041",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/documents",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI08 upload/browse",
+      "request": "multipart `file`, optional `metadata` JSON",
+      "response": "201 DocumentResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-042",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/documents/batch",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI08 upload/browse",
+      "request": "multipart `files`, optional common `metadata` JSON",
+      "response": "201 BatchDocumentUploadResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-043",
+      "method": "GET",
+      "path": "/api/v1/documents/{documentId}",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI09",
+      "request": "Không body",
+      "response": "200 DocumentResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-044",
+      "method": "PATCH",
+      "path": "/api/v1/documents/{documentId}",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI09",
+      "request": "UpdateDocumentRequest",
+      "response": "200 DocumentResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-045",
+      "method": "GET",
+      "path": "/api/v1/documents/{documentId}/download",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI09",
+      "request": "Không body",
+      "response": "200 binary stream",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-046",
+      "method": "GET",
+      "path": "/api/v1/documents/{documentId}/preview",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI09",
+      "request": "Optional `Range`",
+      "response": "200/206 binary stream",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-047",
+      "method": "DELETE",
+      "path": "/api/v1/documents/{documentId}",
+      "controller": "src/main/java/com/kbase/document/controller/DocumentController.java",
+      "ui": "UI09",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-048",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/ai/conversations",
+      "controller": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "ui": "UI14",
+      "request": "CreateAiConversationRequest",
+      "response": "201 CreateAiConversationResponse; 429 `AI_RATE_LIMIT_EXCEEDED`; 503 `AI_PROVIDER_UNAVAILABLE` hoặc `AI_USAGE_GUARD_UNAVAILABLE`; provider failure vẫn giữ conversation/USER/FAILED marker",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-049",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/ai/conversations",
+      "controller": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "ui": "UI14",
+      "request": "`page=0`, `size=20`",
+      "response": "200 PageResponse&lt;AiConversationResponse&gt;",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-050",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/ai/conversations/{conversationId}",
+      "controller": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "ui": "UI14",
+      "request": "Không body",
+      "response": "200 AiConversationResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-051",
+      "method": "PATCH",
+      "path": "/api/v1/projects/{projectId}/ai/conversations/{conversationId}",
+      "controller": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "ui": "UI14",
+      "request": "RenameAiConversationRequest",
+      "response": "200 AiConversationResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-052",
+      "method": "DELETE",
+      "path": "/api/v1/projects/{projectId}/ai/conversations/{conversationId}",
+      "controller": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "ui": "UI14",
+      "request": "Không body",
+      "response": "204 No Content",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-053",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/ai/conversations/{conversationId}/messages",
+      "controller": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "ui": "UI14",
+      "request": "SendAiMessageRequest",
+      "response": "200 AiTurnResponse; 429 `AI_RATE_LIMIT_EXCEEDED`; 503 `AI_PROVIDER_UNAVAILABLE` hoặc `AI_USAGE_GUARD_UNAVAILABLE`",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-054",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/ai/conversations/{conversationId}/messages",
+      "controller": "src/main/java/com/kbase/ai/controller/ProjectAssistantController.java",
+      "ui": "UI14",
+      "request": "`page=0`, `size=50`",
+      "response": "200 PageResponse&lt;AiTurnResponse&gt;",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-055",
+      "method": "GET",
+      "path": "/api/v1/projects/{projectId}/documents/{documentId}/ai-index",
+      "controller": "src/main/java/com/kbase/ai/controller/DocumentAiIndexController.java",
+      "ui": "UI09 / UI08 recent upload panel",
+      "request": "Không body",
+      "response": "200 DocumentAiIndexResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-056",
+      "method": "POST",
+      "path": "/api/v1/projects/{projectId}/documents/{documentId}/ai-index/retry",
+      "controller": "src/main/java/com/kbase/ai/controller/DocumentAiIndexController.java",
+      "ui": "UI09 / UI08 recent upload panel",
+      "request": "Không body",
+      "response": "202 DocumentAiIndexResponse",
+      "verification": "NOT RUN"
+    },
+    {
+      "id": "FEAPI-057",
+      "method": "POST",
+      "path": "/api/v1/ai/guide/query",
+      "controller": "src/main/java/com/kbase/ai/controller/GuideController.java",
+      "ui": "UI15",
+      "request": "GuideQueryRequest",
+      "response": "200 GuideQueryResponse (`GROUNDED`/`NO_EVIDENCE`); 429 `AI_RATE_LIMIT_EXCEEDED`; 503 `AI_PROVIDER_UNAVAILABLE` hoặc `AI_USAGE_GUARD_UNAVAILABLE`",
+      "verification": "NOT RUN"
+    }
+  ]
+}
