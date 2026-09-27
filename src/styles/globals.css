@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: #F4F6F8;
+    --surface-elevated: #FFFFFF;
+    --ink: #171A1F;
+    --ink-muted: #56616F;
+    --border: #D8DEE6;
+    --border-control: #7C8796;
+    --accent: #0F766E;
+  }
+
+  body {
+    background-color: #F4F6F8;
+    color: #171A1F;
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Custom focus outline adhering to WCAG 3:1 contrast */
+  :focus-visible {
+    outline: 2px solid #0F766E;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* White Neumorphism utility classes */
+.neu-flat {
+  background: #F4F6F8;
+  box-shadow: 4px 4px 10px #dce1e6, -4px -4px 10px #ffffff;
+}
+
+.neu-elevated {
+  background: #FFFFFF;
+  box-shadow: 6px 6px 16px #dce1e6, -6px -6px 16px #ffffff;
+}
+
+.neu-card {
+  background: #FFFFFF;
+  border: 1px solid #E6EBF0;
+  box-shadow: 3px 3px 10px #e2e8f0, -3px -3px 10px #ffffff;
+}
+
+.neu-inset {
+  background: #F4F6F8;
+  box-shadow: inset 3px 3px 6px #dce1e6, inset -3px -3px 6px #ffffff;
+}
+
+.neu-button {
+  background: #F4F6F8;
+  border: 1px solid #D8DEE6;
+  box-shadow: 3px 3px 8px #dce1e6, -3px -3px 8px #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-button:hover:not(:disabled) {
+  box-shadow: 4px 4px 12px #d2d8e0, -4px -4px 12px #ffffff;
+  transform: translateY(-1px);
+}
+
+.neu-button:active:not(:disabled) {
+  box-shadow: inset 2px 2px 5px #dce1e6, inset -2px -2px 5px #ffffff;
+  transform: translateY(0);
+}
+
+.neu-button-primary {
+  background: #171A1F;
+  color: #FFFFFF;
+  box-shadow: 3px 3px 10px rgba(23, 26, 31, 0.25);
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-button-primary:hover:not(:disabled) {
+  background: #252A32;
+  box-shadow: 4px 4px 14px rgba(23, 26, 31, 0.35);
+  transform: translateY(-1px);
+}
+
+.neu-button-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 2px 2px 6px rgba(23, 26, 31, 0.25);
+}

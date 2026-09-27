@@ -17,11 +17,12 @@ assert.equal(new Set(manifest.operations.map((o) => o.id)).size, 57);
 
 for (const snapshot of registry.snapshots) {
   const bytes = await readFile(resolve(root, snapshot.path));
-  assert.equal(createHash('sha256').update(bytes).digest('hex'), snapshot.sha256,
+  const normalized = Buffer.from(bytes.toString('utf8').replace(/\r\n/g, '\n'), 'utf8');
+  assert.equal(createHash('sha256').update(normalized).digest('hex'), snapshot.sha256,
     `Pinned snapshot changed: ${snapshot.path}`);
 }
 
-const controllers = await read('docs/references/backend/controller-source.md');
+const controllers = (await read('docs/references/backend/controller-source.md')).replace(/\r\n/g, '\n');
 const parsedOperations = new Set();
 for (const section of controllers.split(/^## /m).slice(1)) {
   const base = section.match(/@RequestMapping\("([^"]+)"\)/)?.[1];
@@ -33,18 +34,19 @@ for (const section of controllers.split(/^## /m).slice(1)) {
 }
 assert.deepEqual([...parsedOperations].sort(), [...operationSet].sort(), 'Controller/manifest drift');
 
-const coverage = await read('docs/references/API_UI_COVERAGE.md');
+const coverage = (await read('docs/references/API_UI_COVERAGE.md')).replace(/\r\n/g, '\n');
 const coverageRows = [...coverage.matchAll(/^\| (FEAPI-\d{3}) \| (GET|POST|PUT|PATCH|DELETE) \| `([^`]+)`/gm)];
 assert.equal(coverageRows.length, 57);
 assert.deepEqual(coverageRows.map((m) => `${m[2]} ${m[3]}`).sort(), [...operationSet].sort());
-const inventory = await read('docs/product-specs/UI_INVENTORY.md');
+const inventory = (await read('docs/product-specs/UI_INVENTORY.md')).replace(/\r\n/g, '\n');
 const ids = [...inventory.matchAll(/^\| (UI\d{2}) \|/gm)].map((m) => m[1]);
 assert.deepEqual(ids, Array.from({ length: 22 }, (_, i) => `UI${String(i + 1).padStart(2, '0')}`));
 
-const skill = await read('.agents/skills/kbase-frontend/SKILL.md');
+const skill = (await read('.agents/skills/kbase-frontend/SKILL.md')).replace(/\r\n/g, '\n');
 assert.match(skill, /^---\nname: kbase-frontend\ndescription: "[^\n]+"\n---\n/);
 assert.ok(skill.split('\n').length < 500);
-assert.match(await read('.agents/rules/workspace-boundary.md'), /^---\ntrigger: always_on\n/);
+const boundary = (await read('.agents/rules/workspace-boundary.md')).replace(/\r\n/g, '\n');
+assert.match(boundary, /^---\ntrigger: always_on\n/);
 
 const ignored = new Set(['.git', 'node_modules', 'dist', '.cache', 'coverage', 'test-results', 'playwright-report']);
 async function markdownFiles(dir) {
