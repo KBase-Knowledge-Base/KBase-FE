@@ -1,9 +1,21 @@
 # PLANS — FE
 
-Một plan canonical: [KBase_FE_v1_Implementation_Plan](exec-plans/active/KBase_FE_v1_Implementation_Plan.md). WP0–WP7 là work package nội bộ cho một lượt thực thi toàn bộ UI, không phải các milestone BE và không cần prompt tiếp theo giữa các trang.
+## Plan hiện hành
 
-Plan gồm scope, dependencies, gates, risks, checkpoint và kết quả. Sau mỗi work package, ghi trạng thái thực tế và evidence. Khi context bị ngắt, ghi file đang sửa, command gần nhất, bước tiếp theo; tiếp tục cùng plan, không bắt đầu lại.
+Công việc tiếp theo dùng [KBase_FE_Review_Update_Plan](exec-plans/active/KBase_FE_Review_Update_Plan.md). Đây là một lượt **review → repair → deterministic verification → live FE↔BE browser verification** trên implementation v1 hiện tại. Plan liệt kê các issue baseline đã phát hiện, ranh giới workspace/database/BE, browser gate bắt buộc, fallback được phép và Definition of Done.
 
-Giữ plan tại đường dẫn canonical trong suốt phiên. Khi kết thúc, đổi status trong plan; không move file làm hỏng handoff links. Chỉ đánh dấu COMPLETE khi tất cả acceptance và live verification cần thiết PASS; thiếu runtime thì IMPLEMENTED — LIVE VERIFICATION BLOCKED, không PASS giả.
+Implementation agent phải đọc plan review này sau `AGENTS.md` và `.agents/skills/kbase-frontend/SKILL.md`. Không suy ra rằng status PASS lịch sử là evidence hiện tại; RV0 phải chạy lại gate để establish truth.
 
-State tracking chỉ cập nhật `docs/FE_STATUS.md`, `docs/QUALITY_SCORE.md`, `docs/INTEGRATION_ISSUES.md` và plan FE; các tài liệu FE khác như DEVELOPMENT, evidence và contract đã chấp thuận được cập nhật khi implementation ảnh hưởng. Không cập nhật tài liệu BE. Các báo cáo BE trong snapshot là bằng chứng lịch sử, không phải lệnh tiếp tục M0–M11.
+## Plan implementation v1
+
+[KBase_FE_v1_Implementation_Plan](exec-plans/active/KBase_FE_v1_Implementation_Plan.md) là plan xây dựng FE v1 ban đầu và được giữ tại đường dẫn cũ để bảo toàn lịch sử/handoff links. Không chạy lại WP0–WP7 từ đầu trừ khi plan review yêu cầu đọc source decision tương ứng.
+
+Review/update được thực hiện trên code hiện tại, ưu tiên root-cause fix nhỏ và không phá architecture/harness. Nếu giải pháp đề xuất trong plan review không khả thi, agent được chọn giải pháp FE khác khi vẫn giữ contract, security, test rigor và scope boundary.
+
+## Quy tắc state/evidence
+
+Sau mỗi work package, ghi trạng thái thực tế và evidence. Khi context bị ngắt, ghi file đang sửa, command gần nhất, bước tiếp theo; tiếp tục cùng plan, không bắt đầu lại.
+
+Chỉ đánh dấu COMPLETE khi acceptance tương ứng đã verify. Thiếu runtime/credential/fixture thì dùng IMPLEMENTED / BLOCKED / NOT RUN chính xác; deterministic/mock PASS không phải live BE hoặc live Gemini PASS.
+
+State tracking cập nhật `docs/FE_STATUS.md`, `docs/QUALITY_SCORE.md`, `docs/INTEGRATION_ISSUES.md` và plan FE. Các tài liệu FE khác như DEVELOPMENT, TESTING, ARCHITECTURE, evidence và contract artifacts chỉ cập nhật khi implementation/evidence làm nội dung hiện tại không còn đúng. Không cập nhật tài liệu BE.
